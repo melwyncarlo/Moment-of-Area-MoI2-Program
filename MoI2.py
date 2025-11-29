@@ -69,7 +69,10 @@ else:
             a = abs(a)
             cx /= (6*a)
             cy /= (6*a)
-            ixx = abs(ixx) - a * cy * cy
-            iyy = abs(iyy) - a * cx * cx
-            ixy = abs(ixy) - a * cx * cy
-        print(f"\n Ixx = {ixx:.{decimal_places}f}\n Iyy = {iyy:.{decimal_places}f}\n Ixy = {ixy:.{decimal_places}f}\n Cx = {cx:.{decimal_places}f}\n Cy = {cy:.{decimal_places}f}\n A = {a:.{decimal_places}f}")
+            ixx = abs(ixx)
+            iyy = abs(iyy)
+            ixy = abs(ixy)
+            ixx_cc = ixx - a * cy * cy
+            iyy_cc = iyy - a * cx * cx
+            ixy_cc = ixy - a * cx * cy
+        print(f"\n Ixx_00 = {ixx:.{decimal_places}f}\n Iyy_00 = {iyy:.{decimal_places}f}\n Ixy_00 = {ixy:.{decimal_places}f}\n Ixx_cc = {ixx_cc:.{decimal_places}f}\n Iyy_cc = {iyy_cc:.{decimal_places}f}\n Ixy_cc = {ixy_cc:.{decimal_places}f}\n Cx = {cx:.{decimal_places}f}\n Cy = {cy:.{decimal_places}f}\n A = {a:.{decimal_places}f}")
